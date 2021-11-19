@@ -2,7 +2,7 @@ node{
     def mvnHome
  
    stage('SetEnv') { 
-      git 'https://github.com/sneha0302/java-reachability-playground.git'
+      git 'https://github.com/hazelnutlove/synk123.git'
       mvnHome = tool 'MAVEN_HOME'
 	   
    }
@@ -14,7 +14,7 @@ node{
       
    }
    stage('Snyk'){
-        snykSecurity failOnIssues: true, organisation: 'b398e91b-bba0-44d5-bd7a-d72d389e5cec', snykInstallation: 'SnykSec', snykTokenId: 'snykKey'
+        snykSecurity failOnIssues: false, organisation: 'f65ad61c-06f2-4536-8f24-6053572ff733', snykInstallation: 'SnykSec', snykTokenId: 'snykKey'
        
    }
 
